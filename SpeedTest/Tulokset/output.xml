@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-19T12:46:40.989181" rpa="false" schemaversion="5">
+<suite id="s1" name="SpeedTest" source="C:\Users\Olli\Desktop\RobotFramework\SpeedTest\SpeedTest.robot">
+<test id="s1-t1" name="Automatisoi robotti painamaan reaktioaikatestiä mahdollisimman nopeasti" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-19T12:46:41.222193" level="INFO">Opening browser 'chrome' to base url 'https://humanbenchmark.com/tests/reactiontime'.</msg>
+<arg>${sivusto}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-19T12:46:41.221976" elapsed="2.627905"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-19T12:46:43.850274" elapsed="0.041637"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T12:46:46.892668" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-19T12:46:43.892252" elapsed="3.000505"/>
+</kw>
+<doc>Automatisoi robotti painamaan https://humanbenchmark.com/tests/reactiontime sivustoa ja katso kuinka nopeasti se pystyy siihen.</doc>
+<status status="PASS" start="2025-01-19T12:46:41.221082" elapsed="5.671967"/>
+</test>
+<test id="s1-t2" name="Paina evästeasetuksista Consent" line="18">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-19T12:46:46.894458" level="INFO">Clicking button 'xpath=//button[contains(., 'Consent')]'.</msg>
+<arg>xpath=//button[contains(., 'Consent')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-19T12:46:46.894209" elapsed="0.146458"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T12:46:50.041610" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-19T12:46:47.040999" elapsed="3.000703"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T12:46:50.042181" level="INFO">Clicking element '//*[@id="root"]/div/div[4]/div[1]'.</msg>
+<arg>//*[@id="root"]/div/div[4]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-19T12:46:50.042009" elapsed="0.061700"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T12:47:00.105015" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-19T12:46:50.103984" elapsed="10.001128"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-19T12:47:00.105632" level="INFO">Clicking element 'xpath=//div[contains(@class, "view-go")]'.</msg>
+<arg>xpath=//div[contains(@class, "view-go")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-19T12:47:00.105443" elapsed="0.055362"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T12:47:03.162142" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-19T12:47:00.161079" elapsed="3.001150"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-19T12:47:03.162532" elapsed="2.170555"/>
+</kw>
+<status status="PASS" start="2025-01-19T12:46:46.893799" elapsed="18.439603"/>
+</test>
+<status status="PASS" start="2025-01-19T12:46:40.990588" elapsed="24.343794"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SpeedTest">SpeedTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
