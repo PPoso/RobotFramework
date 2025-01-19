@@ -4,7 +4,9 @@ Library  SeleniumLibrary
 *** Variables ***
 
 ${sivusto}  https://humanbenchmark.com/tests/reactiontime
-${nappula}  xpath=//button[contains(text(), 'Consent')]
+${nappula}  xpath=//button[contains(., 'Consent')]
+${alku}  //*[@id="root"]/div/div[4]/div[1]
+${vihree}  xpath=//div[contains(@class, "view-go")]
 
 *** Test Cases ***
 Automatisoi robotti painamaan reaktioaikatestiä mahdollisimman nopeasti
@@ -13,15 +15,14 @@ Automatisoi robotti painamaan reaktioaikatestiä mahdollisimman nopeasti
 
     Open Browser  ${sivusto}  chrome
     Maximize Browser Window
-    Sleep  3s
 
 Paina evästeasetuksista Consent
-    Click Button    xpath=//button[contains(., 'Consent')] 
-    Sleep   3s
+    Click Button    ${nappula}
 
 
-    Click Element  //*[@id="root"]/div/div[4]/div[1]
-    Sleep  10s
-    Click Element  xpath=//div[contains(@class, "view-go")]
+    Click Element  ${alku}
+    Wait Until Element Is Visible  ${vihree}  timeout=10s
+    Click Element  ${vihree}
+    Capture Page Screenshot
     Sleep  3s
     Close Browser
