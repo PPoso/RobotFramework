@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-19T16:58:20.706702" rpa="false" schemaversion="5">
+<suite id="s1" name="Register" source="C:\Users\Olli\Desktop\RobotFramework\register\Register.robot">
+<test id="s1-t1" name="Rekisteröi Onlinesim.io palveluun." line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-19T16:58:20.935914" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<arg>${sivu}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-19T16:58:20.935692" elapsed="1.942501"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T16:58:32.878970" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-19T16:58:22.878531" elapsed="10.000537"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-19T16:58:32.879668" level="INFO">Clicking button '//*[@id="L2AGLb"]/div'.</msg>
+<msg time="2025-01-19T16:58:32.976089" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-19T16:58:32.976235" level="FAIL">Button with locator '//*[@id="L2AGLb"]/div' not found.</msg>
+<arg>//*[@id="L2AGLb"]/div</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-19T16:58:32.879381" elapsed="0.100421">Button with locator '//*[@id="L2AGLb"]/div' not found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-01-19T16:58:32.980096" elapsed="0.000031"/>
+</kw>
+<doc>Automatisoi robotti painamaan https://humanbenchmark.com/tests/reactiontime sivustoa ja katso kuinka nopeasti se pystyy siihen.</doc>
+<status status="FAIL" start="2025-01-19T16:58:20.934726" elapsed="12.045661">Button with locator '//*[@id="L2AGLb"]/div' not found.</status>
+</test>
+<status status="FAIL" start="2025-01-19T16:58:20.708017" elapsed="12.273452"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

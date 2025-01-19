@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-19T14:20:23.679311" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-19T16:37:49.844827" rpa="false" schemaversion="5">
 <suite id="s1" name="SpeedTest" source="C:\Users\Olli\Desktop\RobotFramework\SpeedTest\SpeedTest.robot">
 <test id="s1-t1" name="Automatisoi robotti painamaan reaktioaikatestiä mahdollisimman nopeasti" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:20:23.957679" level="INFO">Opening browser 'chrome' to base url 'https://humanbenchmark.com/tests/reactiontime'.</msg>
+<msg time="2025-01-19T16:37:50.201703" level="INFO">Opening browser 'chrome' to base url 'https://humanbenchmark.com/tests/reactiontime'.</msg>
 <arg>${sivusto}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-19T14:20:23.957442" elapsed="2.759390"/>
+<status status="PASS" start="2025-01-19T16:37:50.201496" elapsed="3.213208"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-19T14:20:26.717174" elapsed="0.035740"/>
+<status status="PASS" start="2025-01-19T16:37:53.415092" elapsed="0.035493"/>
 </kw>
 <doc>Automatisoi robotti painamaan https://humanbenchmark.com/tests/reactiontime sivustoa ja katso kuinka nopeasti se pystyy siihen.</doc>
-<status status="PASS" start="2025-01-19T14:20:23.956320" elapsed="2.796966"/>
+<status status="PASS" start="2025-01-19T16:37:50.200639" elapsed="3.250304"/>
 </test>
 <test id="s1-t2" name="Paina evästeasetuksista Consent" line="19">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:20:26.755336" level="INFO">Clicking button 'xpath=//button[contains(., 'Consent')]'.</msg>
+<msg time="2025-01-19T16:37:53.452879" level="INFO">Clicking button 'xpath=//button[contains(., 'Consent')]'.</msg>
 <arg>${nappula}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:20:26.754623" elapsed="0.196188"/>
+<status status="PASS" start="2025-01-19T16:37:53.452564" elapsed="0.151919"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:20:26.951221" level="INFO">Clicking element '//*[@id="root"]/div/div[4]/div[1]'.</msg>
+<msg time="2025-01-19T16:37:53.605132" level="INFO">Clicking element '//*[@id="root"]/div/div[4]/div[1]'.</msg>
 <arg>${alku}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:20:26.951042" elapsed="0.129262"/>
+<status status="PASS" start="2025-01-19T16:37:53.604895" elapsed="0.149681"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${vihree}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-19T14:20:27.080569" elapsed="4.404939"/>
+<status status="PASS" start="2025-01-19T16:37:53.754927" elapsed="2.883578"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:20:31.485986" level="INFO">Clicking element 'xpath=//div[contains(@class, "view-go")]'.</msg>
+<msg time="2025-01-19T16:37:56.638945" level="INFO">Clicking element 'xpath=//div[contains(@class, "view-go")]'.</msg>
 <arg>${vihree}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-19T14:20:31.485789" elapsed="0.051925"/>
+<status status="PASS" start="2025-01-19T16:37:56.638763" elapsed="0.045200"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-01-19T14:20:31.895716" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-19T16:37:56.770167" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-01-19T14:20:31.538016" elapsed="0.357868"/>
+<status status="PASS" start="2025-01-19T16:37:56.684247" elapsed="0.086005"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-19T14:20:34.896737" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-01-19T16:37:59.771130" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-19T14:20:31.896274" elapsed="3.000776"/>
+<status status="PASS" start="2025-01-19T16:37:56.770483" elapsed="3.000747"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-19T14:20:34.897708" elapsed="2.166997"/>
+<status status="PASS" start="2025-01-19T16:37:59.771554" elapsed="2.160622"/>
 </kw>
-<status status="PASS" start="2025-01-19T14:20:26.754072" elapsed="10.310930"/>
+<status status="PASS" start="2025-01-19T16:37:53.451981" elapsed="8.480492"/>
 </test>
-<status status="PASS" start="2025-01-19T14:20:23.680786" elapsed="13.385202"/>
+<status status="PASS" start="2025-01-19T16:37:49.846242" elapsed="12.087130"/>
 </suite>
 <statistics>
 <total>
