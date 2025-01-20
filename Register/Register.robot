@@ -16,3 +16,5 @@ Rekisteröi Onlinesim.io palveluun.
     Click Element    xpath=//span[text()="Sign Up"]
     Sleep  10s
     Close Browser
+
+    # tee joku toinen testitapaus kun sivustot huomaa automatisoinnin
