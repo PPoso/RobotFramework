@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-20T18:11:01.689307" rpa="false" schemaversion="5">
+<suite id="s1" name="GooglesearchCheck" source="C:\Users\Olli\Desktop\RobotFramework\GooglesearchCheck\GooglesearchCheck.robot">
+<test id="s1-t1" name="Testi millä haetaan binghaulla." line="16">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-01-20T18:11:01.930193" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com/'.</msg>
+<arg>${sivu}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-20T18:11:01.929937" elapsed="1.725279"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-20T18:11:03.655678" elapsed="0.025411"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-20T18:11:05.682318" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-20T18:11:03.681370" elapsed="2.001040"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-20T18:11:05.683107" level="INFO">Clicking button 'id=bnp_btn_accept'.</msg>
+<arg>${Eväste}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-20T18:11:05.682749" elapsed="0.090566"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-20T18:11:05.773806" level="INFO">Typing text 'Testiautomaatio' into text field 'id=sb_form_q'.</msg>
+<arg>${nappula}</arg>
+<arg>Testiautomaatio</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-20T18:11:05.773599" elapsed="0.117841"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-20T18:11:05.892024" level="INFO">Sending key(s) ('RETURN',) to id=sb_form_q element.</msg>
+<msg time="2025-01-20T18:11:06.220040" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-20T18:11:06.220123" level="INFO">Releasing special key RETURN.</msg>
+<arg>${nappula}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-20T18:11:05.891702" elapsed="0.855943"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-20T18:11:11.748714" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-20T18:11:06.747961" elapsed="5.000843"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-20T18:11:11.749222" elapsed="2.155825"/>
+</kw>
+<doc>Etsi binghaulla tietyllä hakusanalla ja tarkista, että ensimmäinen tulos sisältää hakusanan, paina ensimmäistä tulosta.</doc>
+<status status="PASS" start="2025-01-20T18:11:01.928934" elapsed="11.976403"/>
+</test>
+<status status="PASS" start="2025-01-20T18:11:01.690679" elapsed="12.215819"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="GooglesearchCheck">GooglesearchCheck</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
