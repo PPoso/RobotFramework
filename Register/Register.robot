@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 
-${sivu}  https://www.google.com/
+${sivu}  https://www.onlinesim.io/
 
 *** Test Cases ***
 Rekisteröi Onlinesim.io palveluun.
@@ -11,6 +11,8 @@ Rekisteröi Onlinesim.io palveluun.
 
 
     Open Browser  ${sivu}  chrome
+    Maximize Browser Window
+    Sleep  5s
+    Click Element    xpath=//span[text()="Sign Up"]
     Sleep  10s
-    Click Button
     Close Browser
