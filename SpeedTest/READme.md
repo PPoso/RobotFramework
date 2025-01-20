@@ -1,0 +1,1 @@
+# Automatisoitu reaktioaikatesti. Käytetty SeleniumLibrarya.
