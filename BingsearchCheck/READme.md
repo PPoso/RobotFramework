@@ -1,0 +1,2 @@
+# Etsii Bingistä testiautomaatio sanalla, tarkistaa onko ensimmäisessä linkissä sana testiautomaatio
+# ja klikkaa sitä jos on.
