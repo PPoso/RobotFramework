@@ -1,0 +1,1 @@
+# Automatisoitu sääntarkastus ilmatieteenlaitoksella. Ottaa listavariablesta arvon ja tallentaa nykyisen tunnin lämpötilan logiin.
