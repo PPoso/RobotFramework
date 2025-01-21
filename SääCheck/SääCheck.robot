@@ -11,7 +11,7 @@ Test Teardown    Close Browser
 ${startti}    https://www.ilmatieteenlaitos.fi/
 ${buttonEväste}    //*[@id="cookie-consent-content"]/div/div/div[2]/button[2]    
 ${hakuValikko}    //*[@id="header-search-location-field"]
-@{kaupungit}    Helsinki    Vantaa    Espoo    Jyväskylä
+@{kaupungit}    Helsinki    Vantaa    Espoo    Jyväskylä    Hämeenlinna    Kuopio
 ${listaEka}    //*[@id[contains(., '__BVID__')]]
 
 *** Test Cases ***
@@ -25,10 +25,8 @@ Lämpötilan checkaus
     Click Button    ${buttonEväste}
     Input Text    ${hakuValikko}    ${kaupungit}[0]
     Press Keys    ${hakuValikko}    RETURN
-# Odottaa kunnes taulukko on latautunut ja tallentaa arvon kohdassa row 1 column 1
-# tämän jälkeen pitäisi esittää arvo logissa, mutta näyttää nyt päivämäärät arvona.
-# korjaillaan myöhemmin oikeat sarakkeet
+# Odottaa kunnes taulukko on latautunut ja tallentaa arvon kohdassa row 4 column 2
+# Näyttää nykyisen tunnin lämpötilan logissa. Voisi näyttää sen jossakin muuallakin paremmin.
     Wait Until Element Is Visible    ${listaEka}    timeout=10s
-    ${arvo}   Get Table Cell   ${listaEka}    1    1
+    ${arvo}   Get Table Cell   ${listaEka}    4    2
     Log    ${arvo}
-    Sleep    5s

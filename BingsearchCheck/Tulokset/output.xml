@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-21T11:46:25.194361" rpa="false" schemaversion="5">
-<suite id="s1" name="BingsearchCheck" source="C:\Users\Olli\Desktop\RobotFramework\BingsearchCheck\BingsearchCheck.Robot">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-21T20:46:58.754990" rpa="false" schemaversion="5">
+<suite id="s1" name="BingsearchCheck" source="C:\Users\Olli\Desktop\RobotFramework\BingsearchCheck\BingsearchCheck.robot">
 <test id="s1-t1" name="Testi millä haetaan binghaulla." line="17">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-01-21T11:46:25.469516" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com/'.</msg>
+<msg time="2025-01-21T20:46:59.177724" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com/'.</msg>
 <arg>${sivu}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-21T11:46:25.469295" elapsed="2.051744"/>
+<status status="PASS" start="2025-01-21T20:46:59.177471" elapsed="4.139829"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-21T11:46:27.521440" elapsed="0.086956"/>
+<status status="PASS" start="2025-01-21T20:47:03.317896" elapsed="0.035596"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${evästesivu}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-21T11:46:27.608705" elapsed="0.459920"/>
+<status status="PASS" start="2025-01-21T20:47:03.353809" elapsed="0.683621"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-01-21T11:46:28.069345" level="INFO">Executing JavaScript:
+<msg time="2025-01-21T20:47:04.038111" level="INFO">Executing JavaScript:
 document.getElementById('bnp_btn_accept').click()
 Without any arguments.</msg>
 <arg>document.getElementById('${eväste}').click()</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-01-21T11:46:28.068922" elapsed="0.019272"/>
+<status status="PASS" start="2025-01-21T20:47:04.037713" elapsed="0.016900"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-21T11:46:28.088922" level="INFO">Typing text 'Testiautomaatio' into text field 'id=sb_form_q'.</msg>
+<msg time="2025-01-21T20:47:04.055266" level="INFO">Typing text 'Testiautomaatio' into text field 'id=sb_form_q'.</msg>
 <arg>${nappula}</arg>
 <arg>Testiautomaatio</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-21T11:46:28.088586" elapsed="0.173618"/>
+<status status="PASS" start="2025-01-21T20:47:04.054971" elapsed="0.165287"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-01-21T11:46:28.263216" level="INFO">Sending key(s) ('RETURN',) to id=sb_form_q element.</msg>
-<msg time="2025-01-21T11:46:28.585379" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-01-21T11:46:28.585451" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2025-01-21T20:47:04.221107" level="INFO">Sending key(s) ('RETURN',) to id=sb_form_q element.</msg>
+<msg time="2025-01-21T20:47:04.614597" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-21T20:47:04.614667" level="INFO">Releasing special key RETURN.</msg>
 <arg>${nappula}</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-01-21T11:46:28.262638" elapsed="0.979356"/>
+<status status="PASS" start="2025-01-21T20:47:04.220701" elapsed="0.820361"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Testiautomaatio</arg>
 <arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-21T11:46:29.242319" elapsed="0.054334"/>
+<status status="PASS" start="2025-01-21T20:47:05.041436" elapsed="0.069607"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-21T11:46:29.297197" level="INFO">Clicking element '//*[@id="b_results"]/li[3]/div[1]'.</msg>
+<msg time="2025-01-21T20:47:05.111810" level="INFO">Clicking element '//*[@id="b_results"]/li[3]/div[1]'.</msg>
 <arg>${linkki}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-21T11:46:29.296981" elapsed="0.139236"/>
+<status status="PASS" start="2025-01-21T20:47:05.111526" elapsed="0.136637"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Testiautomaatio</arg>
 <arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-21T11:46:29.436526" elapsed="0.029544"/>
+<status status="PASS" start="2025-01-21T20:47:05.248592" elapsed="0.023839"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-21T11:46:32.467725" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-01-21T20:47:08.273436" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-21T11:46:29.466931" elapsed="3.000887"/>
+<status status="PASS" start="2025-01-21T20:47:05.273076" elapsed="3.000460"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-21T11:46:32.468174" elapsed="2.185255"/>
+<status status="PASS" start="2025-01-21T20:47:08.273922" elapsed="2.180145"/>
 </kw>
 <doc>Etsi binghaulla tietyllä hakusanalla ja tarkista, että ensimmäinen tulos sisältää hakusanan, paina ensimmäistä tulosta.</doc>
-<status status="PASS" start="2025-01-21T11:46:25.468257" elapsed="9.185387"/>
+<status status="PASS" start="2025-01-21T20:46:59.176368" elapsed="11.278012"/>
 </test>
-<status status="PASS" start="2025-01-21T11:46:25.195830" elapsed="9.458663"/>
+<status status="PASS" start="2025-01-21T20:46:58.756784" elapsed="11.699110"/>
 </suite>
 <statistics>
 <total>
