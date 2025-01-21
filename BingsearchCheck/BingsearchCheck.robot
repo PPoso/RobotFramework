@@ -9,41 +9,28 @@ Test Teardown  Close Browser
 
 ${sivu}  https://www.bing.com/
 ${evästesivu}  id=bnp_container
-${eväste}  id=bnp_btn_accept
+${eväste}  bnp_btn_accept
 ${nappula}  id=sb_form_q
+${linkki}  //*[@id="b_results"]/li[3]/div[1]
 
 *** Test Cases ***
 Testi millä haetaan binghaulla.
     [Documentation]  Etsi binghaulla tietyllä hakusanalla ja tarkista, että ensimmäinen tulos sisältää hakusanan, paina ensimmäistä tulosta.
     Maximize Browser Window
 
-# Odottaa että evästesivu tulee esille. Periaatteessa toimisi ilman että odottaa elementin tulemista
-# mutta menee pelkällä Sleepillä. Ei hyvä käytäntö, palaa tähän myöhemmin.
-  #  Wait Until Element Is Visible  ${evästesivu}  10s 
-    Sleep  2s
-    Click Button  ${Eväste}
+# Tarkistaa, että sivusta löytyy evästeasetukset ennen kuin klikkaa hyväksy nappia.
+# Ei löytynyt seleniumlibrarysta Wait Until Element is Clickable, joten piti käyttää JavaScriptiä
+# Saadakseen sen toimimaan
+    Wait Until Page Contains Element  ${evästesivu}  10s
+    Execute JavaScript  document.getElementById('${eväste}').click()
 
 # Kirjoittaa hakukenttään testiautomaatio ja painaa enter näppäintä
     Input Text  ${nappula}  Testiautomaatio
     Press Keys  ${nappula}  RETURN
-    
-    Sleep  5s
-
-
-
-
-
-
-
-
-
-
-    #Tarkista ilmatieteenlaitokselta jostakin kaupungista sää, tarkista että lämpötila näkyy.
-
-    # Etsi wikipediasta jollakin hakusanalla ja tarkista avautuvasta sivusta, että se sisältää kyseisen hakusanan.
-
-    # Avaa youtube, etsi joku video ja paina sitä, varmista että video alkaa pyörimään.
-
-    # Mene https://www.w3schools.com/html/html_forms.asp, täytä lomake, tarkista että tiedot lähetettiin.
-
-    # Kokeile eri kirjastoja esim. Browser ja Qweb
+# Tarkistaa sisältääkö hakusanalla haettu sana Testiautomaatio-sanan.
+# Painaa ensimmäistä linkkiä ja tarkistaa sivulta sisältääkö se sanan Testiautomaatio
+    Wait Until Page Contains  Testiautomaatio  10s
+    Click Element  ${linkki} 
+    Wait Until Page Contains  Testiautomaatio  10s
+# Näyttää sivua hetken aikaa, mikä avattiin
+    Sleep  3s
