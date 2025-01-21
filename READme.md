@@ -1,0 +1,1 @@
+# Erinäisiä robot framework testitapauksia. Pääsääntöisesti tehty käyttäen SeleniumLibrarya
