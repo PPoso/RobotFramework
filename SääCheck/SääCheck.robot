@@ -33,5 +33,6 @@ Lämpötilan checkaus
      Convert To String    ${arvo}
 # Poistaa celsiusmerkin merkkijonosta, tallentaa arvon stringinä temp variableen oikein.
 # kysymys kuuluukin miten saadaan temp variablesta tiedot pihalle
+# Logaa nyt alustavasti nykyisen tunnin lämpötilan aivan oikein.
     Execute Javascript    text = "${arvo}";    console.log(typeof text);    temp = text.replace("\u00B0", "");
-    Sleep    3s
+    Log    ${arvo}
