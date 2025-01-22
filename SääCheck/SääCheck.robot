@@ -27,9 +27,11 @@ Lämpötilan checkaus
     Press Keys    ${hakuValikko}    RETURN
 # Odottaa kunnes taulukko on latautunut ja tallentaa arvon kohdassa row 4 column 2
 # Näyttää nykyisen tunnin lämpötilan logissa.
+# muuttaa arvon stringiksi.
     Wait Until Element Is Visible    ${listaEka}    timeout=10s
     ${arvo}   Get Table Cell   ${listaEka}    4    2
-    Log    ${arvo}
-# Poistaa celsiusmerkin merkkijonosta, mutta tulostaa vain None? Varmaan tallentamisessa vikaa
-    ${uusiArvo}    Execute Javascript    text = "${arvo}";    temp = text.replace("\u00B0", "")
-    Log    ${uusiArvo}
+     Convert To String    ${arvo}
+# Poistaa celsiusmerkin merkkijonosta, tallentaa arvon stringinä temp variableen oikein.
+# kysymys kuuluukin miten saadaan temp variablesta tiedot pihalle
+    Execute Javascript    text = "${arvo}";    console.log(typeof text);    temp = text.replace("\u00B0", "");
+    Sleep    3s
