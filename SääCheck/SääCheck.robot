@@ -20,7 +20,7 @@ ${listaEka}    //*[@id[contains(., '__BVID__')]]
 
 Lämpötilan checkaus
     Maximize Browser Window
-# Hyväksyy evästeet, syöttää lista variablesta ensimmäisen indeksin, mikä sisältää Helsinki arvon.
+# Hyväksyy evästeet, syöttää lista variablesta ensimmäisen indeksin, mikä sisältää kaupungeista arvon.
 # Painaa enteriä
     Click Button    ${buttonEväste}
     Input Text    ${hakuValikko}    ${kaupungit}[3]
