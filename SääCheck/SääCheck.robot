@@ -23,10 +23,13 @@ Lämpötilan checkaus
 # Hyväksyy evästeet, syöttää lista variablesta ensimmäisen indeksin, mikä sisältää Helsinki arvon.
 # Painaa enteriä
     Click Button    ${buttonEväste}
-    Input Text    ${hakuValikko}    ${kaupungit}[0]
+    Input Text    ${hakuValikko}    ${kaupungit}[3]
     Press Keys    ${hakuValikko}    RETURN
 # Odottaa kunnes taulukko on latautunut ja tallentaa arvon kohdassa row 4 column 2
-# Näyttää nykyisen tunnin lämpötilan logissa. Voisi näyttää sen jossakin muuallakin paremmin.
+# Näyttää nykyisen tunnin lämpötilan logissa.
     Wait Until Element Is Visible    ${listaEka}    timeout=10s
     ${arvo}   Get Table Cell   ${listaEka}    4    2
     Log    ${arvo}
+# Poistaa celsiusmerkin merkkijonosta, mutta tulostaa vain None?
+    ${uusiArvo}    Execute Javascript    text = "${arvo}";    temp = text.replace("\u00B0", "")
+    Log    ${uusiArvo}

@@ -1,68 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-21T20:57:38.547116" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-22T08:16:47.369730" rpa="false" schemaversion="5">
 <suite id="s1" name="SääCheck" source="C:\Users\Olli\Desktop\RobotFramework\SääCheck\SääCheck.robot">
 <test id="s1-t1" name="Lämpötilan checkaus" line="21">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-01-21T20:57:38.834472" level="INFO">Opening browser 'chrome' to base url 'https://www.ilmatieteenlaitos.fi/'.</msg>
+<msg time="2025-01-22T08:16:47.662629" level="INFO">Opening browser 'chrome' to base url 'https://www.ilmatieteenlaitos.fi/'.</msg>
 <arg>${startti}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-21T20:57:38.834212" elapsed="2.286072"/>
+<status status="PASS" start="2025-01-22T08:16:47.662374" elapsed="2.296688"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-21T20:57:41.120916" elapsed="0.042438"/>
+<status status="PASS" start="2025-01-22T08:16:49.959528" elapsed="0.037249"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-21T20:57:41.164315" level="INFO">Clicking button '//*[@id="cookie-consent-content"]/div/div/div[2]/button[2]'.</msg>
+<msg time="2025-01-22T08:16:49.997587" level="INFO">Clicking button '//*[@id="cookie-consent-content"]/div/div/div[2]/button[2]'.</msg>
 <arg>${buttonEväste}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-21T20:57:41.163809" elapsed="1.148783"/>
+<status status="PASS" start="2025-01-22T08:16:49.997190" elapsed="1.153301"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-21T20:57:42.313220" level="INFO">Typing text 'Hämeenlinna' into text field '//*[@id="header-search-location-field"]'.</msg>
+<msg time="2025-01-22T08:16:51.151342" level="INFO">Typing text 'Jyväskylä' into text field '//*[@id="header-search-location-field"]'.</msg>
 <arg>${hakuValikko}</arg>
-<arg>${kaupungit}[4]</arg>
+<arg>${kaupungit}[3]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-21T20:57:42.312935" elapsed="0.137253"/>
+<status status="PASS" start="2025-01-22T08:16:51.150910" elapsed="0.121287"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-01-21T20:57:42.450901" level="INFO">Sending key(s) ('RETURN',) to //*[@id="header-search-location-field"] element.</msg>
-<msg time="2025-01-21T20:57:42.796425" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-01-21T20:57:42.796646" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2025-01-22T08:16:51.272891" level="INFO">Sending key(s) ('RETURN',) to //*[@id="header-search-location-field"] element.</msg>
+<msg time="2025-01-22T08:16:51.585822" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-22T08:16:51.586040" level="INFO">Releasing special key RETURN.</msg>
 <arg>${hakuValikko}</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-01-21T20:57:42.450532" elapsed="0.410184"/>
+<status status="PASS" start="2025-01-22T08:16:51.272533" elapsed="0.403269"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${listaEka}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-21T20:57:42.862398" elapsed="1.379533"/>
+<status status="PASS" start="2025-01-22T08:16:51.676421" elapsed="1.281857"/>
 </kw>
 <kw name="Get Table Cell" owner="SeleniumLibrary">
-<msg time="2025-01-21T20:57:44.507533" level="INFO">${arvo} = -6°</msg>
+<msg time="2025-01-22T08:16:53.218855" level="INFO">${arvo} = -7°</msg>
 <var>${arvo}</var>
 <arg>${listaEka}</arg>
 <arg>4</arg>
 <arg>2</arg>
 <doc>Returns contents of a table cell.</doc>
-<status status="PASS" start="2025-01-21T20:57:44.242265" elapsed="0.265309"/>
+<status status="PASS" start="2025-01-22T08:16:52.958634" elapsed="0.260263"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-21T20:57:44.508015" level="INFO">-6°</msg>
+<msg time="2025-01-22T08:16:53.219353" level="INFO">-7°</msg>
 <arg>${arvo}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-21T20:57:44.507860" elapsed="0.000203"/>
+<status status="PASS" start="2025-01-22T08:16:53.219195" elapsed="0.000206"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-22T08:16:53.220072" level="INFO">Executing JavaScript:
+text = "-7°";temp = text.replace("°", "")
+Without any arguments.</msg>
+<msg time="2025-01-22T08:16:53.225243" level="INFO">${uusiArvo} = None</msg>
+<var>${uusiArvo}</var>
+<arg>text = "${arvo}";</arg>
+<arg>temp = text.replace("\u00B0", "")</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-22T08:16:53.219652" elapsed="0.005642"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-22T08:16:53.225932" level="INFO">None</msg>
+<arg>${uusiArvo}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-22T08:16:53.225722" elapsed="0.000270"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-21T20:57:44.508328" elapsed="2.162358"/>
+<status status="PASS" start="2025-01-22T08:16:53.226313" elapsed="2.169114"/>
 </kw>
-<status status="PASS" start="2025-01-21T20:57:38.833126" elapsed="7.837978"/>
+<status status="PASS" start="2025-01-22T08:16:47.661440" elapsed="7.734717"/>
 </test>
-<status status="PASS" start="2025-01-21T20:57:38.548698" elapsed="8.123306"/>
+<status status="PASS" start="2025-01-22T08:16:47.371401" elapsed="8.028082"/>
 </suite>
 <statistics>
 <total>
