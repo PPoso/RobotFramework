@@ -30,6 +30,6 @@ Lämpötilan checkaus
     Wait Until Element Is Visible    ${listaEka}    timeout=10s
     ${arvo}   Get Table Cell   ${listaEka}    4    2
     Log    ${arvo}
-# Poistaa celsiusmerkin merkkijonosta, mutta tulostaa vain None?
+# Poistaa celsiusmerkin merkkijonosta, mutta tulostaa vain None? Varmaan tallentamisessa vikaa
     ${uusiArvo}    Execute Javascript    text = "${arvo}";    temp = text.replace("\u00B0", "")
     Log    ${uusiArvo}
