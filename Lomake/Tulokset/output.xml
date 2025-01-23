@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-23T11:27:43.526067" rpa="false" schemaversion="5">
+<suite id="s1" name="Lomake" source="C:\Users\Olli\Desktop\RobotFramework\lomake\Lomake.robot">
+<test id="s1-t1" name="Käy lomake lävitse" line="21">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-01-23T11:27:43.833087" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/html/html_forms.asp'.</msg>
+<arg>${url}</arg>
+<arg>${selain}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-23T11:27:43.832807" elapsed="2.406731"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-23T11:27:46.240311" level="INFO">Clicking element '//*[@id="accept-choices"]'.</msg>
+<arg>${hyväksy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-23T11:27:46.239924" elapsed="0.113120"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${etunimet}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-23T11:27:46.353479" elapsed="0.313180"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-23T11:27:46.667312" level="INFO">Typing text '{'nimi': 'Matti', 'nimi1': 'Janne', 'nimi2': 'Jonne'}' into text field '//*[@id="fname"]'.</msg>
+<arg>${etunimet}</arg>
+<arg>${etunimi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-23T11:27:46.667047" elapsed="0.301603"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-23T11:27:46.969164" level="INFO">Typing text '{'suku': 'Järvinen', 'suku1': 'Sukula', 'suku2': 'Virtanen'}' into text field '//*[@id="lname"]'.</msg>
+<arg>${sukunimet}</arg>
+<arg>${sukunimi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-23T11:27:46.968915" elapsed="0.860737"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-23T11:27:47.830178" level="INFO">Clicking element '//*[@id="main"]/div[3]/div/form/input[3]'.</msg>
+<arg>${submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-23T11:27:47.829947" elapsed="1.186217"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-23T11:27:54.016957" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-23T11:27:49.016507" elapsed="5.000547"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-23T11:27:54.017431" elapsed="2.216148"/>
+</kw>
+<doc>Käy lomakkeen lävitse käyttäen argumentteja</doc>
+<status status="PASS" start="2025-01-23T11:27:43.831701" elapsed="12.402651"/>
+</test>
+<status status="PASS" start="2025-01-23T11:27:43.527744" elapsed="12.709793"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Lomake">Lomake</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
