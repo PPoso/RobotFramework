@@ -1,1 +1,1 @@
-# Etsii Suomen yleisimmän etunimen sekä sukunimen ja lisää ne HTML lomakkeeseen. Tämän jälkeen lähettää lomakkeen ja tarkastaa, että sieltä löytyy kyseiset nimet.
+# Etsii Suomen yleisimmän etunimen sekä sukunimen ja lisää ne HTML lomakkeeseen. Tämän jälkeen lähettää lomakkeen ja tarkastaa, että sieltä löytyy kyseiset nimet. Tiedostot eritelty POMeihin ja argumentteja käytetään keywordeissa.
