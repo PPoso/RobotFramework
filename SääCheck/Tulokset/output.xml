@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-22T11:58:57.091127" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-22T16:38:01.662574" rpa="false" schemaversion="5">
 <suite id="s1" name="SääCheck" source="C:\Users\Olli\Desktop\RobotFramework\SääCheck\SääCheck.robot">
 <test id="s1-t1" name="Lämpötilan checkaus" line="21">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-01-22T11:58:57.444257" level="INFO">Opening browser 'chrome' to base url 'https://www.ilmatieteenlaitos.fi/'.</msg>
+<msg time="2025-01-22T16:38:01.941958" level="INFO">Opening browser 'chrome' to base url 'https://www.ilmatieteenlaitos.fi/'.</msg>
 <arg>${startti}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-22T11:58:57.443969" elapsed="2.553433"/>
+<status status="PASS" start="2025-01-22T16:38:01.941722" elapsed="2.533550"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-22T11:58:59.997798" elapsed="0.058941"/>
+<status status="PASS" start="2025-01-22T16:38:04.475722" elapsed="0.040301"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-22T11:59:00.058096" level="INFO">Clicking button '//*[@id="cookie-consent-content"]/div/div/div[2]/button[2]'.</msg>
+<msg time="2025-01-22T16:38:04.517086" level="INFO">Clicking button '//*[@id="cookie-consent-content"]/div/div/div[2]/button[2]'.</msg>
 <arg>${buttonEväste}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-22T11:59:00.057374" elapsed="1.134580"/>
+<status status="PASS" start="2025-01-22T16:38:04.516494" elapsed="1.123683"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-22T11:59:01.193073" level="INFO">Typing text 'Jyväskylä' into text field '//*[@id="header-search-location-field"]'.</msg>
+<msg time="2025-01-22T16:38:05.641051" level="INFO">Typing text 'Jyväskylä' into text field '//*[@id="header-search-location-field"]'.</msg>
 <arg>${hakuValikko}</arg>
 <arg>${kaupungit}[3]</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-22T11:59:01.192520" elapsed="0.144499"/>
+<status status="PASS" start="2025-01-22T16:38:05.640605" elapsed="0.116309"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-01-22T11:59:01.337743" level="INFO">Sending key(s) ('RETURN',) to //*[@id="header-search-location-field"] element.</msg>
-<msg time="2025-01-22T11:59:01.630152" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-01-22T11:59:01.630393" level="INFO">Releasing special key RETURN.</msg>
+<msg time="2025-01-22T16:38:05.757754" level="INFO">Sending key(s) ('RETURN',) to //*[@id="header-search-location-field"] element.</msg>
+<msg time="2025-01-22T16:38:06.054539" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-22T16:38:06.054857" level="INFO">Releasing special key RETURN.</msg>
 <arg>${hakuValikko}</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-01-22T11:59:01.337353" elapsed="0.347876"/>
+<status status="PASS" start="2025-01-22T16:38:05.757324" elapsed="0.367419"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${listaEka}</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-01-22T11:59:01.686149" elapsed="0.746994"/>
+<status status="PASS" start="2025-01-22T16:38:06.126027" elapsed="1.323569"/>
 </kw>
 <kw name="Get Table Cell" owner="SeleniumLibrary">
-<msg time="2025-01-22T11:59:02.707906" level="INFO">${arvo} = -7°</msg>
+<msg time="2025-01-22T16:38:07.693651" level="INFO">${arvo} = -5°</msg>
 <var>${arvo}</var>
 <arg>${listaEka}</arg>
 <arg>4</arg>
 <arg>2</arg>
 <doc>Returns contents of a table cell.</doc>
-<status status="PASS" start="2025-01-22T11:59:02.433494" elapsed="0.274460"/>
+<status status="PASS" start="2025-01-22T16:38:07.450370" elapsed="0.243322"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
 <arg>${arvo}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2025-01-22T11:59:02.708268" elapsed="0.000209"/>
+<status status="PASS" start="2025-01-22T16:38:07.694012" elapsed="0.000200"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-01-22T11:59:02.709157" level="INFO">Executing JavaScript:
-text = "-7°";console.log(typeof text);temp = text.replace("°", "");
+<msg time="2025-01-22T16:38:07.694864" level="INFO">Executing JavaScript:
+text = "-5°";console.log(typeof text);temp = text.replace("°", "");
 Without any arguments.</msg>
 <arg>text = "${arvo}";</arg>
 <arg>console.log(typeof text);</arg>
 <arg>temp = text.replace("\u00B0", "");</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-01-22T11:59:02.708733" elapsed="0.007144"/>
+<status status="PASS" start="2025-01-22T16:38:07.694447" elapsed="0.006721"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-22T11:59:02.716528" level="INFO">-7°</msg>
+<msg time="2025-01-22T16:38:07.701739" level="INFO">-5°</msg>
 <arg>${arvo}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-22T11:59:02.716370" elapsed="0.000207"/>
+<status status="PASS" start="2025-01-22T16:38:07.701585" elapsed="0.000202"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-22T11:59:02.716864" elapsed="2.167562"/>
+<status status="PASS" start="2025-01-22T16:38:07.702047" elapsed="2.158984"/>
 </kw>
-<status status="PASS" start="2025-01-22T11:58:57.442877" elapsed="7.441804"/>
+<status status="PASS" start="2025-01-22T16:38:01.940775" elapsed="7.920441"/>
 </test>
-<status status="PASS" start="2025-01-22T11:58:57.092924" elapsed="7.792897"/>
+<status status="PASS" start="2025-01-22T16:38:01.664244" elapsed="8.197934"/>
 </suite>
 <statistics>
 <total>

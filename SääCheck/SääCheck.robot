@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 
-# Tarkista ilmatieteenlaitokselta jostakin kaupungista sää, tarkista että lämpötila näkyy.
+# Tarkista ilmatieteenlaitokselta jostakin kaupungista sää ja tarkista että lämpötila näkyy.
 
 Test Setup    Open Browser    ${startti}    chrome
 Test Teardown    Close Browser
