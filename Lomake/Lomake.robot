@@ -16,7 +16,7 @@ ${sukunimet}    //*[@id="lname"]
 @{sukunimi}    Järvinen    Sukula    Virtanen
 ${submit}    //*[@id="main"]/div[3]/div/form/input[3]        
 
-
+# Tämä voisi ehkä hakea jostakin yleisimmät ihmisten nimet ja käyttää niitä arvoja millä luo formssin.
 *** Test Cases ***
 Käy lomake lävitse
     [Documentation]    Käy lomakkeen lävitse eri nimillä ja tarkistaa menikö se oikein.
