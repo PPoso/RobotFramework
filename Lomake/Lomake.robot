@@ -12,18 +12,20 @@ ${selain}    chrome
 ${hyväksy}    //*[@id="accept-choices"]
 ${etunimet}    //*[@id="fname"]
 ${sukunimet}    //*[@id="lname"]
-&{etunimi}    nimi=Matti    nimi1=Janne    nimi2=Jonne
-&{sukunimi}    suku=Järvinen    suku1=Sukula    suku2=Virtanen
+@{etunimi}    Matti    Janne    Jonne
+@{sukunimi}    Järvinen    Sukula    Virtanen
 ${submit}    //*[@id="main"]/div[3]/div/form/input[3]        
 
 
 *** Test Cases ***
 Käy lomake lävitse
-    [Documentation]    Käy lomakkeen lävitse käyttäen argumentteja
+    [Documentation]    Käy lomakkeen lävitse eri nimillä ja tarkistaa menikö se oikein.
+    Maximize Browser Window
+    Wait Until Page Contains Element    ${hyväksy}
     Click Element    ${hyväksy}
     Clear Element Text    ${etunimet}
-    Input Text    ${etunimet}    ${etunimi}
-    Input Text    ${sukunimet}    ${sukunimi}  
+    Input Text    ${etunimet}    ${etunimi[0]}
+    Input Text    ${sukunimet}    ${sukunimi[0]}  
     Click Element    ${submit}
     Sleep    5s    
     
