@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${url2}    https://www.w3schools.com/html/html_forms.asp    #accept-choices
+${url2}    https://www.w3schools.com/html/html_forms.asp
 ${hyväksy}    //*[@id="accept-choices"]     
 ${etunimet}    css:input[name='fname']
 ${sukunimet}    css:input[name='lname']
