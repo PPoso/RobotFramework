@@ -8,6 +8,7 @@ ${sukunimiURL}    //*[@id="content"]/section/div/div/nav/ul/li[5]/a
 ${sukunimi1}    //*[@id="main"]/div[2]/section/table
 
 *** Keywords ***
+# Hakee Suosituimman etunimen sekä etunimen ja tallentaa nämä arvot
 Hae Etunimi Ja Sukunimi
     Maximize Browser Window
     ${etunimi}    Get Text    ${etunimi1}
