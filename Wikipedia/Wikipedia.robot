@@ -11,7 +11,7 @@ Test Teardown    Close Browser
 
 ${wikipedia}    https://fi.wikipedia.org/wiki/Wikipedia:Etusivu
 &{lista}    sivu1=Robot Framework    sivu2=Selenium    sivu3=Tietotekniikka   
-${haku}    //*[@id="searchInput"]
+${haku}    css:input[name='search']
 
 *** Test Cases ***
 
