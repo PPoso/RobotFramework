@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${url}    https://nimipalvelu.dvv.fi/suosituimmat-etunimet    
-${etunimi1}    //*[@id="main"]/div[2]/div[2]/div[2]/section[1]/table/tbody/tr[1]/td[2]/a
+${etunimi1}    //*[@id="main"]/div[2]/div[2]/div[2]/section[1]/table/tbody/tr[1]/td[2]/a    
 ${sukunimiURL}    //*[@id="content"]/section/div/div/nav/ul/li[5]/a
 ${sukunimi1}    //*[@id="main"]/div[2]/section/table
 
