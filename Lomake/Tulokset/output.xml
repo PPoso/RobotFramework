@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-25T13:30:53.603466" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-26T11:39:27.233585" rpa="false" schemaversion="5">
 <suite id="s1" name="Lomake" source="C:\Users\Olli\Desktop\RobotFramework\lomake\Lomake.robot">
 <test id="s1-t1" name="Käy lomake lävitse" line="13">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-01-25T13:30:53.886770" level="INFO">Opening browser 'chrome' to base url 'https://nimipalvelu.dvv.fi/suosituimmat-etunimet'.</msg>
+<msg time="2025-01-26T11:39:27.676337" level="INFO">Opening browser 'chrome' to base url 'https://nimipalvelu.dvv.fi/suosituimmat-etunimet'.</msg>
 <arg>${url}</arg>
 <arg>${selain}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-25T13:30:53.886525" elapsed="1.965541"/>
+<status status="PASS" start="2025-01-26T11:39:27.676091" elapsed="2.391963"/>
 </kw>
 <kw name="Hae Etunimi Ja Sukunimi" owner="Nimihaku">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-25T13:30:55.853418" elapsed="0.036137"/>
+<status status="PASS" start="2025-01-26T11:39:30.069562" elapsed="0.044895"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:30:55.980836" level="INFO">${etunimi} = Juhani</msg>
+<msg time="2025-01-26T11:39:30.185805" level="INFO">${etunimi} = Juhani</msg>
 <var>${etunimi}</var>
 <arg>${etunimi1}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:30:55.889729" elapsed="0.091150"/>
+<status status="PASS" start="2025-01-26T11:39:30.114628" elapsed="0.071222"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:30:55.981215" level="INFO">Clicking link '//*[@id="content"]/section/div/div/nav/ul/li[5]/a'.</msg>
+<msg time="2025-01-26T11:39:30.186236" level="INFO">Clicking link '//*[@id="content"]/section/div/div/nav/ul/li[5]/a'.</msg>
 <arg>${sukunimiURL}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:30:55.981028" elapsed="0.082279"/>
+<status status="PASS" start="2025-01-26T11:39:30.185998" elapsed="0.131818"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${sukunimi1}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-25T13:30:56.063554" elapsed="0.220064"/>
+<status status="PASS" start="2025-01-26T11:39:30.317975" elapsed="0.224233"/>
 </kw>
 <kw name="Get Table Cell" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:30:56.339828" level="INFO">${sukunimi} = Korhonen</msg>
+<msg time="2025-01-26T11:39:30.598223" level="INFO">${sukunimi} = Korhonen</msg>
 <var>${sukunimi}</var>
 <arg>${sukunimi1}</arg>
 <arg>2</arg>
 <arg>2</arg>
 <doc>Returns contents of a table cell.</doc>
-<status status="PASS" start="2025-01-25T13:30:56.283782" elapsed="0.056087"/>
+<status status="PASS" start="2025-01-26T11:39:30.542397" elapsed="0.055866"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-25T13:30:56.340024" elapsed="2.143659"/>
+<status status="PASS" start="2025-01-26T11:39:30.598416" elapsed="2.123355"/>
 </kw>
 <return>
 <value>${etunimi}</value>
 <value>${sukunimi}</value>
-<status status="PASS" start="2025-01-25T13:30:58.484002" elapsed="0.000204"/>
+<status status="PASS" start="2025-01-26T11:39:32.722089" elapsed="0.000235"/>
 </return>
-<msg time="2025-01-25T13:30:58.484963" level="INFO">${etunimi} = Juhani</msg>
-<msg time="2025-01-25T13:30:58.485138" level="INFO">${sukunimi} = Korhonen</msg>
+<msg time="2025-01-26T11:39:32.723106" level="INFO">${etunimi} = Juhani</msg>
+<msg time="2025-01-26T11:39:32.723283" level="INFO">${sukunimi} = Korhonen</msg>
 <var>${etunimi}</var>
 <var>${sukunimi}</var>
-<status status="PASS" start="2025-01-25T13:30:55.852644" elapsed="2.632593"/>
+<status status="PASS" start="2025-01-26T11:39:30.068610" elapsed="2.654771"/>
 </kw>
 <kw name="Avaa Lomakesivu" owner="Form">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:30:58.488038" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/html/html_forms.asp'.</msg>
+<msg time="2025-01-26T11:39:32.726305" level="INFO">Opening browser 'chrome' to base url 'https://www.w3schools.com/html/html_forms.asp'.</msg>
 <arg>${url2}</arg>
 <arg>${selain}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-25T13:30:58.487326" elapsed="2.342874"/>
+<status status="PASS" start="2025-01-26T11:39:32.725481" elapsed="2.493317"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-25T13:31:00.830366" elapsed="0.041512"/>
+<status status="PASS" start="2025-01-26T11:39:35.219063" elapsed="0.044997"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${hyväksy}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-25T13:31:00.872058" elapsed="0.037965"/>
+<status status="PASS" start="2025-01-26T11:39:35.264338" elapsed="0.015435"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:31:00.910393" level="INFO">Clicking element '//*[@id="accept-choices"]'.</msg>
+<msg time="2025-01-26T11:39:35.280129" level="INFO">Clicking element 'css:div#accept-choices'.</msg>
 <arg>${hyväksy}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:31:00.910185" elapsed="0.117860"/>
+<status status="PASS" start="2025-01-26T11:39:35.279935" elapsed="0.108847"/>
 </kw>
-<status status="PASS" start="2025-01-25T13:30:58.486386" elapsed="2.541778"/>
+<status status="PASS" start="2025-01-26T11:39:32.724520" elapsed="2.664438"/>
 </kw>
 <kw name="Täytä Ja Lähetä Lomake" owner="Form">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${etunimet}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.029116" elapsed="0.363032"/>
+<status status="PASS" start="2025-01-26T11:39:35.389906" elapsed="0.342665"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:31:01.392559" level="INFO">Typing text 'Juhani' into text field 'css:input[name='fname']'.</msg>
+<msg time="2025-01-26T11:39:35.733139" level="INFO">Typing text 'Juhani' into text field 'css:input[name='fname']'.</msg>
 <arg>${etunimet}</arg>
 <arg>${etunimi}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.392335" elapsed="0.167832"/>
+<status status="PASS" start="2025-01-26T11:39:35.732754" elapsed="0.143766"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:31:01.560788" level="INFO">Typing text 'Korhonen' into text field 'css:input[name='lname']'.</msg>
+<msg time="2025-01-26T11:39:35.876901" level="INFO">Typing text 'Korhonen' into text field 'css:input[name='lname']'.</msg>
 <arg>${sukunimet}</arg>
 <arg>${sukunimi}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.560421" elapsed="0.136308"/>
+<status status="PASS" start="2025-01-26T11:39:35.876686" elapsed="0.106325"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:31:01.697084" level="INFO">Clicking element 'css:input[type=submit]'.</msg>
+<msg time="2025-01-26T11:39:35.983367" level="INFO">Clicking element 'css:input[type=submit]'.</msg>
 <arg>${submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.696893" elapsed="0.105733"/>
+<status status="PASS" start="2025-01-26T11:39:35.983175" elapsed="0.125478"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>NEW</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.802882" elapsed="0.018177"/>
+<status status="PASS" start="2025-01-26T11:39:36.108817" elapsed="0.013173"/>
 </kw>
 <arg>${etunimi}</arg>
 <arg>${sukunimi}</arg>
-<status status="PASS" start="2025-01-25T13:31:01.028582" elapsed="0.792586"/>
+<status status="PASS" start="2025-01-26T11:39:35.389374" elapsed="0.732713"/>
 </kw>
 <kw name="Tarkista Lomakkeen Lähetys" owner="Form">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${etunimi}</arg>
 <arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.821785" elapsed="0.040789"/>
+<status status="PASS" start="2025-01-26T11:39:36.122701" elapsed="0.520903"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:31:01.889643" level="INFO">Current page contains text 'Juhani'.</msg>
+<msg time="2025-01-26T11:39:36.699418" level="INFO">Current page contains text 'Juhani'.</msg>
 <arg>${etunimi}</arg>
 <arg>10s</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.862738" elapsed="0.026990"/>
+<status status="PASS" start="2025-01-26T11:39:36.643878" elapsed="0.055656"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-01-25T13:31:01.903716" level="INFO">Current page contains text 'Korhonen'.</msg>
+<msg time="2025-01-26T11:39:36.715979" level="INFO">Current page contains text 'Korhonen'.</msg>
 <arg>${sukunimi}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.889878" elapsed="0.013923"/>
+<status status="PASS" start="2025-01-26T11:39:36.699693" elapsed="0.016369"/>
 </kw>
 <arg>${etunimi}</arg>
 <arg>${sukunimi}</arg>
-<status status="PASS" start="2025-01-25T13:31:01.821452" elapsed="0.082445"/>
+<status status="PASS" start="2025-01-26T11:39:36.122380" elapsed="0.593777"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-25T13:31:01.904259" elapsed="2.154146"/>
+<status status="PASS" start="2025-01-26T11:39:36.716494" elapsed="2.149334"/>
 </kw>
 <doc>Käy lomakkeen läpi eri nimillä ja tarkistaa tuloksen.</doc>
-<status status="PASS" start="2025-01-25T13:30:53.885511" elapsed="10.173594"/>
+<status status="PASS" start="2025-01-26T11:39:27.675113" elapsed="11.191411"/>
 </test>
-<status status="PASS" start="2025-01-25T13:30:53.604958" elapsed="10.457339"/>
+<status status="PASS" start="2025-01-26T11:39:27.235122" elapsed="11.634592"/>
 </suite>
 <statistics>
 <total>
