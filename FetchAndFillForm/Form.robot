@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource    Nimihaku.robot
-Resource    Form.robot
+Resource    NamePage.robot
+Resource    FormPage.robot
 
 Test Setup    Open Browser    ${url}    ${browser}
 Test Teardown    Close Browser
@@ -10,16 +10,16 @@ Test Teardown    Close Browser
 
 
 *** Test Cases ***
-Käy lomake lävitse
+Go through the form
 # Testitapauksessa robotti hakee nimipalveluista miehen yleisimmän etunimen sekä sukunimen ja käyttää
 # näitä tallennettuja arvoja täyttääkseen w3s sivuston lomakkeen. Viimeiseksi tarkistaa, että sivu
 # sisältää tämän tallennetun etu- ja sukunimen.
     [Documentation]    Käy lomakkeen läpi eri nimillä ja tarkistaa tuloksen.
 
-    ${first_name}    ${last_name}    Hae Etunimi Ja Sukunimi
+    ${first_name}    ${last_name}    Fetch first and last name
 
-    Avaa Lomakesivu
-    Täytä Ja Lähetä Lomake    ${first_name}    ${last_name}
-    Tarkista Lomakkeen Lähetys    ${first_name}    ${last_name}
+    Open the formpage
+    Fill and send the form    ${first_name}    ${last_name}
+    Check the information on the form    ${first_name}    ${last_name}
 
 

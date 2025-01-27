@@ -9,7 +9,7 @@ ${fetch_last}    //*[@id="main"]/div[2]/section/table
 
 *** Keywords ***
 # Hakee Suosituimman etunimen sekä etunimen ja tallentaa nämä arvot
-Hae Etunimi Ja Sukunimi
+Fetch first and last name
     Maximize Browser Window
     ${first_name}    Get Text    ${fetch_first}
     Click Element    ${fetch_lastUrl}
