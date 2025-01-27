@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T10:01:05.388564" rpa="false" schemaversion="5">
+<suite id="s1" name="SääCheck" source="C:\Users\Olli\Desktop\RobotFramework\WeatherCheck\SääCheck.robot">
+<test id="s1-t1" name="Check the weather" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-01-27T10:01:05.847374" level="INFO">Opening browser 'chrome' to base url 'https://www.ilmatieteenlaitos.fi/'.</msg>
+<arg>${page}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T10:01:05.847152" elapsed="2.722933"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T10:01:08.571707" elapsed="0.120834"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:01:08.693727" level="INFO">Clicking button '//*[@id="cookie-consent-content"]/div/div/div[2]/button[2]'.</msg>
+<arg>${acceptcookies}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T10:01:08.693056" elapsed="0.992011"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:01:09.685973" level="INFO">Typing text 'Jyväskylä' into text field '//*[@id="header-search-location-field"]'.</msg>
+<arg>${searchpage}</arg>
+<arg>${cities}[3]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T10:01:09.685436" elapsed="0.123617"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:01:09.809746" level="INFO">Sending key(s) ('RETURN',) to //*[@id="header-search-location-field"] element.</msg>
+<msg time="2025-01-27T10:01:10.116721" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-27T10:01:10.117063" level="INFO">Releasing special key RETURN.</msg>
+<arg>${searchpage}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-27T10:01:09.809383" elapsed="0.340836"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${firstlist}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-27T10:01:10.150485" elapsed="1.279054"/>
+</kw>
+<kw name="Get Table Cell" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:01:11.653406" level="INFO">${value} = 1°</msg>
+<var>${value}</var>
+<arg>${firstlist}</arg>
+<arg>4</arg>
+<arg>2</arg>
+<doc>Returns contents of a table cell.</doc>
+<status status="PASS" start="2025-01-27T10:01:11.429839" elapsed="0.223607"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-27T10:01:11.653924" level="INFO">1°</msg>
+<arg>${value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-27T10:01:11.653756" elapsed="0.000213"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T10:01:11.654278" elapsed="2.169002"/>
+</kw>
+<doc>Checks the current weather on a chosen area and returns the value.</doc>
+<status status="PASS" start="2025-01-27T10:01:05.846206" elapsed="7.978554"/>
+</test>
+<status status="PASS" start="2025-01-27T10:01:05.390123" elapsed="8.437845"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SääCheck">SääCheck</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
