@@ -1,1 +1,1 @@
-# Erinäisiä robot framework testitapauksia. Pääsääntöisesti tehty käyttäen SeleniumLibrarya
+# Various test cases written in Robot Framework, mainly utilizing the SeleniumLibrary for web automation. These test cases are designed to verify different aspects of web applications, ensuring proper functionality, performance, and user experience.
