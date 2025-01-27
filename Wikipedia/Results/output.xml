@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T10:09:52.634106" rpa="false" schemaversion="5">
+<suite id="s1" name="Wikipedia" source="C:\Users\Olli\Desktop\RobotFramework\Wikipedia\Wikipedia.robot">
+<test id="s1-t1" name="Wikipedian aukasu" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-01-27T10:09:52.980384" level="INFO">Opening browser 'chrome' to base url 'https://fi.wikipedia.org/wiki/Wikipedia:Etusivu'.</msg>
+<arg>${wikipedia}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T10:09:52.980159" elapsed="2.281760"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T10:09:55.262293" elapsed="0.047686"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:09:55.311100" level="INFO">Typing text 'Robot Framework' into text field 'css:input[name='search']'.</msg>
+<arg>${searchbar}</arg>
+<arg>${page}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T10:09:55.310705" elapsed="0.174622"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:09:55.485917" level="INFO">Sending key(s) ('RETURN',) to css:input[name='search'] element.</msg>
+<msg time="2025-01-27T10:09:55.808467" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-27T10:09:55.808707" level="INFO">Releasing special key RETURN.</msg>
+<arg>${searchbar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-27T10:09:55.485502" elapsed="1.500962"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T10:09:58.987215" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T10:09:56.986617" elapsed="2.000823"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:09:59.006804" level="INFO">Current page contains text 'Robot Framework'.</msg>
+<arg>${page}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-01-27T10:09:58.987665" elapsed="0.019215"/>
+</kw>
+<var name="${key}">page1</var>
+<var name="${page}">Robot Framework</var>
+<status status="PASS" start="2025-01-27T10:09:55.310570" elapsed="3.696373"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:09:59.007398" level="INFO">Typing text 'Selenium' into text field 'css:input[name='search']'.</msg>
+<arg>${searchbar}</arg>
+<arg>${page}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T10:09:59.007210" elapsed="0.096178"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:09:59.103998" level="INFO">Sending key(s) ('RETURN',) to css:input[name='search'] element.</msg>
+<msg time="2025-01-27T10:09:59.419011" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-27T10:09:59.419233" level="INFO">Releasing special key RETURN.</msg>
+<arg>${searchbar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-27T10:09:59.103562" elapsed="1.129086"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T10:10:02.233375" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T10:10:00.232810" elapsed="2.000851"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:10:02.293864" level="INFO">Current page contains text 'Selenium'.</msg>
+<arg>${page}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-01-27T10:10:02.234232" elapsed="0.059787"/>
+</kw>
+<var name="${key}">page2</var>
+<var name="${page}">Selenium</var>
+<status status="PASS" start="2025-01-27T10:09:59.007112" elapsed="3.287015"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:10:02.294876" level="INFO">Typing text 'Tietotekniikka' into text field 'css:input[name='search']'.</msg>
+<arg>${searchbar}</arg>
+<arg>${page}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T10:10:02.294557" elapsed="0.121524"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:10:02.416646" level="INFO">Sending key(s) ('RETURN',) to css:input[name='search'] element.</msg>
+<msg time="2025-01-27T10:10:02.704186" level="INFO">Pressing special key RETURN to element.</msg>
+<msg time="2025-01-27T10:10:02.704249" level="INFO">Releasing special key RETURN.</msg>
+<arg>${searchbar}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-27T10:10:02.416249" elapsed="0.838438"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T10:10:05.255464" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T10:10:03.254849" elapsed="2.000762"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-27T10:10:05.286183" level="INFO">Current page contains text 'Tietotekniikka'.</msg>
+<arg>${page}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-01-27T10:10:05.255869" elapsed="0.030393"/>
+</kw>
+<var name="${key}">page3</var>
+<var name="${page}">Tietotekniikka</var>
+<status status="PASS" start="2025-01-27T10:10:02.294391" elapsed="2.991933"/>
+</iter>
+<var>${key}</var>
+<var>${page}</var>
+<value>&amp;{search}</value>
+<status status="PASS" start="2025-01-27T10:09:55.310285" elapsed="9.976095"/>
+</for>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-27T10:10:07.287523" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-27T10:10:05.286638" elapsed="2.001112"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T10:10:07.288674" elapsed="2.161358"/>
+</kw>
+<status status="PASS" start="2025-01-27T10:09:52.979261" elapsed="16.471510"/>
+</test>
+<status status="PASS" start="2025-01-27T10:09:52.635893" elapsed="16.818217"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Wikipedia">Wikipedia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

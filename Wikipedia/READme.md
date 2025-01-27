@@ -1,1 +1,1 @@
-# Robotti, joka käyttää for looppia listan käymiseen ja hakee tietyillä hakusanoilla tietoa.
+# This robot iterates through a list using a for loop and searches for information based on predefined keywords. It automates data retrieval and filtering by extracting relevant details from a source.

@@ -1,5 +1,3 @@
-# Etsi wikipediasta jollakin hakusanalla ja tarkista avautuvasta sivusta, että se sisältää kyseisen hakusanan.
-# Käy lävitse listavariablen eri sanoilla for loopilla
 
 *** Settings ***
 Library  SeleniumLibrary
@@ -10,18 +8,19 @@ Test Teardown    Close Browser
 *** Variables ***
 
 ${wikipedia}    https://fi.wikipedia.org/wiki/Wikipedia:Etusivu
-&{lista}    sivu1=Robot Framework    sivu2=Selenium    sivu3=Tietotekniikka   
-${haku}    css:input[name='search']
+&{searchword}    page1=Robot Framework    page2=Selenium    page3=Tietotekniikka   
+${searchbar}    css:input[name='search']
 
 *** Test Cases ***
 
-Wikipedian aukasu
-    Maximize Browser Window
-# Käyttää FOR looppia käydäkseen kaikki listavariablen hakusanat lävitse ja tarkistaa, että sivu sisältää kyseisen hakusanan.    
-    FOR  ${key}  ${sivu}  IN  &{lista}
-        Input Text    ${haku}    ${sivu}
-        Press Keys    ${haku}    RETURN
+Open Wikipedia and go through the searchwords
+    [Documentation]    Test to go through different searchwords in wikipedia using a for loop.
+
+    Maximize Browser Window 
+    FOR  ${key}  ${page}  IN  &{searchword}
+        Input Text    ${searchbar}    ${page}
+        Press Keys    ${searchbar}    RETURN
         Sleep    2s
-        Page Should Contain    ${sivu}
+        Page Should Contain    ${page}
     END    
     Sleep    2s          
