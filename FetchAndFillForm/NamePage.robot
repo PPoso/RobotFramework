@@ -8,7 +8,7 @@ ${fetch_lastUrl}    //*[@id="content"]/section/div/div/nav/ul/li[5]/a
 ${fetch_last}    //*[@id="main"]/div[2]/section/table
 
 *** Keywords ***
-# Hakee Suosituimman etunimen sekä etunimen ja tallentaa nämä arvot
+# Fetches the most common first and last name
 Fetch first and last name
     Maximize Browser Window
     ${first_name}    Get Text    ${fetch_first}

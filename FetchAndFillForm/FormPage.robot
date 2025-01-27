@@ -10,14 +10,14 @@ ${submit}    css:input[type=submit]
 ${browser}    chrome
 
 *** Keywords ***
-# Avaa lomakesivun ja hyväksyy evästeasetukset
+# Opens the formpage and accepts cookies
 Open the formpage
     Open Browser    ${url_w3}    ${browser}
     Maximize Browser Window
     Wait Until Page Contains Element    ${accept}
     Click Element    ${accept}
 
-# Täyttää lomakkeen käyttäen tallennettuja arvoja
+# Fills the form using fetched values
 Fill and send the form
     [Arguments]    ${first_name}    ${last_name}
     Input Text    ${first_names}    ${first_name}

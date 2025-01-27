@@ -11,10 +11,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Go through the form
-# Testitapauksessa robotti hakee nimipalveluista miehen yleisimmän etunimen sekä sukunimen ja käyttää
-# näitä tallennettuja arvoja täyttääkseen w3s sivuston lomakkeen. Viimeiseksi tarkistaa, että sivu
-# sisältää tämän tallennetun etu- ja sukunimen.
-    [Documentation]    Käy lomakkeen läpi eri nimillä ja tarkistaa tuloksen.
+    [Documentation]    Goes through the form using the most common first and last name. Finally checks the values.
 
     ${first_name}    ${last_name}    Fetch first and last name
 
