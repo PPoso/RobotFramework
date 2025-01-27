@@ -1,1 +1,3 @@
-# Etsii Suomen yleisimmän etunimen sekä sukunimen ja lisää ne HTML lomakkeeseen. Tämän jälkeen lähettää lomakkeen ja tarkastaa, että sieltä löytyy kyseiset nimet. Tiedostot eritelty POMeihin ja argumentteja käytetään keywordeissa.
+# Fetches the Most Common First Name and Last Name in Finland, Fill in an HTML Form, Submit It, and Verify the Names
+
+# This test is designed to ensure that the most common Finnish first name and last name can be successfully retrieved, entered into an HTML form, submitted, and verified. The test follows a structured approach using the Page Object Model (POM) to separate different elements for maintainability and readability. Additionally, keyword-driven testing is applied by passing arguments dynamically.
