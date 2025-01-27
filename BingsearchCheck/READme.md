@@ -1,1 +1,3 @@
-# Etsii Bingistä testiautomaatio sanalla, tarkistaa onko ensimmäisessä linkissä sana testiautomaatio ja klikkaa sitä jos on.
+# Searches from Bing with a certain keyword and checks the first link out.
+
+# Made to test searchability using Bing search engine.
