@@ -10,7 +10,7 @@ ${browser}    chrome
 
 *** Keywords ***
 
-Edit cookies
+Reject cookies
     Open Browser    ${link}    ${browser}
     Maximize Browser Window
     Wait Until Page Contains Element    ${declinebutton}    10s

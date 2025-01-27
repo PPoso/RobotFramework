@@ -10,5 +10,5 @@ Resource    MainPage.robot
 *** Test Cases ***
 
 Navigate through Huutokaupat.com page
-    Edit cookies
+    Reject cookies
     Make an account
