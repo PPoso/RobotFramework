@@ -1,30 +1,29 @@
 *** Settings ***
 Library  SeleniumLibrary
 
+Test Setup    Open Browser  ${page}  chrome
+Test Teardown    Close Browser    
+
 *** Variables ***
 
-${sivusto}  https://humanbenchmark.com/tests/reactiontime
-${nappula}  xpath=//button[contains(., 'Consent')]
-${alku}  //*[@id="root"]/div/div[4]/div[1]
-${vihree}  xpath=//div[contains(@class, "view-go")]
+${page}  https://humanbenchmark.com/tests/reactiontime
+${button}  xpath=//button[contains(., 'Consent')]
+${start}  //*[@id="root"]/div/div[4]/div[1]
+${stop}  xpath=//div[contains(@class, "view-go")]
 
 *** Test Cases ***
-Automatisoi robotti painamaan reaktioaikatestiä mahdollisimman nopeasti
-    [Documentation]  Automatisoi robotti painamaan https://humanbenchmark.com/tests/reactiontime sivustoa ja katso kuinka nopeasti se pystyy siihen.
+SpeedTesting
+    [Documentation]  Automate a robot to complete the speedtest as fast as possible by clicking on the screen when it turn green.
 
-# avaa sovelluksen ja suurentaa ikkunan
-    Open Browser  ${sivusto}  chrome
     Maximize Browser Window
-# painaa evästeasetuksista eteenpäin
-Paina evästeasetuksista Consent
-    Click Button    ${nappula}
+    Click Button    ${button}
 
-# painaa ruutua kerran aloittaaksen testin
-    Click Element  ${alku}
-# odottaa että ruutu vauhtii vihreäksi ja painaa uudestaan pysäyttääkseen testin    
-    Wait Until Element Is Visible  ${vihree}  timeout=10s
-    Click Element  ${vihree}
-# ottaa kuvakaappauksen tuloksista ja sulkee selaimen 
+# Starts the game
+    Click Element  ${start}
+
+# Completes it
+    Wait Until Element Is Visible  ${stop}  timeout=10s
+    Click Element  ${stop}
+
+# Takes screenshot of the results.
     Capture Page Screenshot
-    Close Browser
-# Askeleet voisi erotella erikseen, mutta testin lyhykäisyyden takia en sitä tee. Variablet myös omia tekemisiä varten nimetty. :D    

@@ -1,1 +1,1 @@
-# Automatisoitu reaktioaikatesti. Käytetty SeleniumLibrarya.
+# Reactiontime Test. Used to check how fast a robot can react.
