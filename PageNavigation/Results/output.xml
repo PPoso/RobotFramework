@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T13:55:51.869889" rpa="false" schemaversion="5">
+<suite id="s1" name="Main" source="C:\Users\Olli\Desktop\RobotFramework\PageNavigation\Main.robot">
+<test id="s1-t1" name="Navigate through Huutokaupat.com page" line="12">
+<kw name="Edit cookies" owner="MainPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-27T13:55:52.144470" level="INFO">Opening browser 'chrome' to base url 'https://huutokaupat.com/'.</msg>
+<arg>${link}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-27T13:55:52.144240" elapsed="1.972423"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-27T13:55:54.116881" elapsed="0.038327"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${declinebutton}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T13:55:54.155373" elapsed="1.729368"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-27T13:55:55.885105" level="INFO">Clicking button 'css:button#CybotCookiebotDialogBodyButtonDecline'.</msg>
+<arg>${declinebutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T13:55:55.884902" elapsed="0.087443"/>
+</kw>
+<status status="PASS" start="2025-01-27T13:55:52.143577" elapsed="3.828891"/>
+</kw>
+<kw name="Make an account" owner="MainPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${createbutton}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-27T13:55:55.973088" elapsed="0.012084"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-27T13:55:55.985530" level="INFO">Clicking link 'css:a[variant='default']'.</msg>
+<arg>${createbutton}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-27T13:55:55.985330" elapsed="0.260885"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-27T13:55:56.246368" elapsed="2.170998"/>
+</kw>
+<status status="PASS" start="2025-01-27T13:55:55.972826" elapsed="2.444765"/>
+</kw>
+<status status="PASS" start="2025-01-27T13:55:52.142933" elapsed="6.275239"/>
+</test>
+<status status="PASS" start="2025-01-27T13:55:51.871460" elapsed="6.548482"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
