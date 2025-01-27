@@ -12,7 +12,7 @@ ${sukunimi1}    //*[@id="main"]/div[2]/section/table
 Hae Etunimi Ja Sukunimi
     Maximize Browser Window
     ${etunimi}    Get Text    ${etunimi1}
-    Click Link    ${sukunimiURL}
+    Click Element    ${sukunimiURL}
     Wait Until Page Contains Element    ${sukunimi1}
     ${sukunimi}    Get Table Cell    ${sukunimi1}    2    2
     Close Browser
