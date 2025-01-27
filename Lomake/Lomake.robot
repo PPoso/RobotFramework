@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 Resource    Nimihaku.robot
 Resource    Form.robot
 
-Test Setup    Open Browser    ${url}    ${selain}
+Test Setup    Open Browser    ${url}    ${browser}
 Test Teardown    Close Browser
 
 *** Variables ***
@@ -16,10 +16,10 @@ Käy lomake lävitse
 # sisältää tämän tallennetun etu- ja sukunimen.
     [Documentation]    Käy lomakkeen läpi eri nimillä ja tarkistaa tuloksen.
 
-    ${etunimi}    ${sukunimi}    Hae Etunimi Ja Sukunimi
+    ${first_name}    ${last_name}    Hae Etunimi Ja Sukunimi
 
     Avaa Lomakesivu
-    Täytä Ja Lähetä Lomake    ${etunimi}    ${sukunimi}
-    Tarkista Lomakkeen Lähetys    ${etunimi}    ${sukunimi}
+    Täytä Ja Lähetä Lomake    ${first_name}    ${last_name}
+    Tarkista Lomakkeen Lähetys    ${first_name}    ${last_name}
 
 

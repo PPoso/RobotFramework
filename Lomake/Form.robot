@@ -2,27 +2,26 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${url2}    https://www.w3schools.com/html/html_forms.asp
-${hyväksy}    css:div#accept-choices     
-${etunimet}    css:input[name='fname']
-${sukunimet}    css:input[name='lname']
+${url_w3}    https://www.w3schools.com/html/html_forms.asp
+${accept}    css:div#accept-choices     
+${first_names}    css:input[name='fname']
+${last_names}    css:input[name='lname']
 ${submit}    css:input[type=submit]
-${selain}    chrome
+${browser}    chrome
 
 *** Keywords ***
 # Avaa lomakesivun ja hyväksyy evästeasetukset
 Avaa Lomakesivu
-    Open Browser    ${url2}    ${selain}
+    Open Browser    ${url_w3}    ${browser}
     Maximize Browser Window
-    Wait Until Page Contains Element    ${hyväksy}
-    Click Element    ${hyväksy}
+    Wait Until Page Contains Element    ${accept}
+    Click Element    ${accept}
 
 # Täyttää lomakkeen käyttäen tallennettuja arvoja
 Täytä Ja Lähetä Lomake
-    [Arguments]    ${etunimi}    ${sukunimi}
-    Clear Element Text    ${etunimet}
-    Input Text    ${etunimet}    ${etunimi}
-    Input Text    ${sukunimet}    ${sukunimi}  
+    [Arguments]    ${first_name}    ${last_name}
+    Input Text    ${first_names}    ${first_name}
+    Input Text    ${last_names}    ${last_name}  
     Click Element    ${submit}
     Switch Window    NEW
 
