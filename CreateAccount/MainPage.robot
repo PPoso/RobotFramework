@@ -6,9 +6,9 @@ Library    SeleniumLibrary
 ${declinebutton}    css:button#CybotCookiebotDialogBodyButtonDecline
 ${createbutton}    css:a[variant='default']                    
 
-*** Keywords ***
-
+*** Keywords *** 
 Reject cookies
+    [Documentation]    Rejects the cookies and clicks on create account
     Maximize Browser Window
     Wait Until Page Contains Element    ${declinebutton}    10s
     Click Button    ${declinebutton}

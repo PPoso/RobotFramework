@@ -1,83 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-28T15:01:12.379294" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-28T16:31:06.123200" rpa="false" schemaversion="5">
 <suite id="s1" name="Main" source="C:\Users\Olli\Desktop\RobotFramework\CreateAccount\Main.robot">
-<test id="s1-t1" name="Navigate through Huutokaupat.com page and create an account" line="17">
+<test id="s1-t1" name="Navigate through Huutokaupat.com page and create an account" line="16">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-01-28T15:01:12.695741" level="INFO">Opening browser 'chrome' to base url 'https://huutokaupat.com/'.</msg>
+<msg time="2025-01-28T16:31:06.486429" level="INFO">Opening browser 'chrome' to base url 'https://huutokaupat.com/'.</msg>
 <arg>${link}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-01-28T15:01:12.695447" elapsed="1.853093"/>
+<status status="PASS" start="2025-01-28T16:31:06.486190" elapsed="2.014972"/>
 </kw>
 <kw name="Reject cookies" owner="MainPage">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-01-28T15:01:14.549302" elapsed="0.044338"/>
+<status status="PASS" start="2025-01-28T16:31:08.501960" elapsed="0.057533"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${declinebutton}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-28T15:01:14.593829" elapsed="1.519880"/>
+<status status="PASS" start="2025-01-28T16:31:08.559676" elapsed="1.551809"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-01-28T15:01:16.114071" level="INFO">Clicking button 'css:button#CybotCookiebotDialogBodyButtonDecline'.</msg>
+<msg time="2025-01-28T16:31:10.111923" level="INFO">Clicking button 'css:button#CybotCookiebotDialogBodyButtonDecline'.</msg>
 <arg>${declinebutton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T15:01:16.113871" elapsed="0.546875"/>
+<status status="PASS" start="2025-01-28T16:31:10.111711" elapsed="0.512648"/>
 </kw>
-<status status="PASS" start="2025-01-28T15:01:14.549016" elapsed="2.111846"/>
+<doc>Rejects the cookies and clicks on create account</doc>
+<status status="PASS" start="2025-01-28T16:31:08.501681" elapsed="2.122788"/>
 </kw>
 <kw name="Click make an account" owner="MainPage">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${createbutton}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-28T15:01:16.661477" elapsed="0.010612"/>
+<status status="PASS" start="2025-01-28T16:31:10.625073" elapsed="0.011074"/>
 </kw>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-01-28T15:01:16.672458" level="INFO">Clicking link 'css:a[variant='default']'.</msg>
+<msg time="2025-01-28T16:31:10.636500" level="INFO">Clicking link 'css:a[variant='default']'.</msg>
 <arg>${createbutton}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T15:01:16.672253" elapsed="0.274951"/>
+<status status="PASS" start="2025-01-28T16:31:10.636312" elapsed="0.363068"/>
 </kw>
-<status status="PASS" start="2025-01-28T15:01:16.661219" elapsed="0.286104"/>
+<status status="PASS" start="2025-01-28T16:31:10.624823" elapsed="0.374674"/>
 </kw>
 <kw name="Create an account" owner="AccountPage">
 <kw name="Generate Random String" owner="String">
-<msg time="2025-01-28T15:01:16.948448" level="INFO">${email} = j2950yt7</msg>
-<var>${email}</var>
+<msg time="2025-01-28T16:31:11.000437" level="INFO">${randomemail} = u9h3mf6s</msg>
+<var>${randomemail}</var>
 <arg>8</arg>
 <arg>0123456789abcdefghijklmnopqrstuwxyz</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2025-01-28T15:01:16.948074" elapsed="0.000422"/>
+<status status="PASS" start="2025-01-28T16:31:11.000212" elapsed="0.000255"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-01-28T16:31:11.000750" level="INFO">${randomnumber} = 2327664</msg>
+<var>${randomnumber}</var>
+<arg>7</arg>
+<arg>0123456789</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-01-28T16:31:11.000579" elapsed="0.000197"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-01-28T16:31:11.001044" level="INFO">${randompassword} = gshxkyy%0d&amp;s</msg>
+<var>${randompassword}</var>
+<arg>12</arg>
+<arg>0123456789abcdefghijklmnopqrstuwxyz!"#¤%&amp;/</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-01-28T16:31:11.000881" elapsed="0.000188"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${emailbox}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-01-28T15:01:16.948690" elapsed="0.241198"/>
+<status status="PASS" start="2025-01-28T16:31:11.001181" elapsed="0.262838"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-01-28T15:01:17.190282" level="INFO">Typing text 'j2950yt7@gmail.com' into text field 'css:input[type=email]'.</msg>
+<msg time="2025-01-28T16:31:11.264472" level="INFO">Typing text 'u9h3mf6s@gmail.com' into text field 'css:input[type=email]'.</msg>
 <arg>${emailbox}</arg>
-<arg>${email}@gmail.com</arg>
+<arg>${randomemail}@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-01-28T15:01:17.190051" elapsed="0.130152"/>
+<status status="PASS" start="2025-01-28T16:31:11.264189" elapsed="0.224330"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-28T15:01:22.321145" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-28T15:01:17.320371" elapsed="5.001067"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:11.488940" level="INFO">Typing text '+358442327664' into text field 'css:input[type=phoneNumber]'.</msg>
+<arg>${number}</arg>
+<arg>${numberstart}${randomnumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:11.488688" elapsed="0.117766"/>
 </kw>
-<status status="PASS" start="2025-01-28T15:01:16.947704" elapsed="5.374115"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:11.606851" level="INFO">Typing password into text field 'css:input[type=password]'.</msg>
+<msg time="2025-01-28T16:31:11.639372" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>${randompassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:11.606615" elapsed="0.221708"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:11.828733" level="INFO">Typing password into text field 'css:input[name="passwordAgain"]'.</msg>
+<msg time="2025-01-28T16:31:11.862995" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${passwordagain}</arg>
+<arg>${randompassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:11.828504" elapsed="0.143881"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:11.972727" level="INFO">Typing text 'Testaajankuja 404' into text field 'css:input[name="address"]'.</msg>
+<arg>${address}</arg>
+<arg>Testaajankuja 404</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:11.972547" elapsed="0.121094"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:12.094022" level="INFO">Typing text '00820' into text field 'css:input[name="zipcode"]'.</msg>
+<arg>${zipcode}</arg>
+<arg>00820</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.093818" elapsed="0.095997"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:12.190204" level="INFO">Clicking element 'css:input[name="city"]'.</msg>
+<arg>${city}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.189985" elapsed="0.077419"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${submit}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.267674" elapsed="0.296648"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-28T16:31:12.564666" level="INFO">Clicking button 'css:button.chakra-button.forge-button--reset.forge-button.hk-1yltt2q'.</msg>
+<arg>${submit}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.564478" elapsed="0.194041"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-28T16:31:12.759039" level="INFO">u9h3mf6s</msg>
+<arg>${randomemail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.758791" elapsed="0.000321"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-28T16:31:12.759485" level="INFO">2327664</msg>
+<arg>${randomnumber}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.759294" elapsed="0.000266"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-28T16:31:12.759983" level="INFO">gshxkyy%0d&amp;s</msg>
+<arg>${randompassword}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-28T16:31:12.759749" elapsed="0.000369"/>
+</kw>
+<doc>Generates a random email, number, and password and uses the values provided to create an account.</doc>
+<status status="PASS" start="2025-01-28T16:31:10.999949" elapsed="1.760580"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-01-28T15:01:22.322974" elapsed="2.222679"/>
+<status status="PASS" start="2025-01-28T16:31:12.761007" elapsed="2.167013"/>
 </kw>
-<status status="PASS" start="2025-01-28T15:01:12.693762" elapsed="11.852650"/>
+<status status="PASS" start="2025-01-28T16:31:06.485181" elapsed="8.443549"/>
 </test>
-<status status="PASS" start="2025-01-28T15:01:12.381490" elapsed="12.168824"/>
+<status status="PASS" start="2025-01-28T16:31:06.124788" elapsed="8.806986"/>
 </suite>
 <statistics>
 <total>
