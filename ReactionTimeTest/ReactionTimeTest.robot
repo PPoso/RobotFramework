@@ -13,7 +13,7 @@ ${stop}  xpath=//div[contains(@class, "view-go")]
 
 *** Test Cases ***
 SpeedTesting
-    [Documentation]  Automate a robot to complete the speedtest as fast as possible by clicking on the screen when it turn green.
+    [Documentation]  Automate a robot to complete the reaction time test as fast as possible by clicking on the screen when it turn green.
 
     Maximize Browser Window
     Click Button    ${button}
