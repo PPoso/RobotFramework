@@ -1,0 +1,1 @@
+# Create a robot that does speedtest.net network speedtest and logs the download and upload values.
