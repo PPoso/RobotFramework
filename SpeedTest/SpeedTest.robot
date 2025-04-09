@@ -6,10 +6,10 @@ Library    SeleniumLibrary
 *** Variables ***
 
 ${page}    https://playwright.dev
-${button}    css=span > getStarted_Sjon
+${button}    css=.getStarted_Sjon
 
 *** Test Cases ***
 Example Test
     New Page    ${page}
     Browser.Get Text    h1    contains    Playwright
- #   Click    ${button}    
+    Click    ${button}    
